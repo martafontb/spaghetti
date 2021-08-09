@@ -10,18 +10,22 @@ font-family: 'Work Sans', sans-serif;
 font-size: 16px;
 line-height: 1.5;
 height: 100vh;
+width: 100vw;
 background-color:#60BFEF;
 position: relative;
+overflow: hidden;
 }
 
 header {
 display: flex;
 align-items: flex-end;
-height: 100vh;
+height: 100%;
 }
 
-svg {
-height: fit-content;
+
+.background {
+    width:100%;
+    overflow: hidden;
 }
 
 
@@ -137,12 +141,33 @@ div.label.is-visible{
   }
 
 
+  @media only screen and (max-width:1024) {
+      svg {
+        width: 120%;
+        margin-left: -10%;
+      }
+  }
+
   @media only screen and (max-width: 600px) {
     header {
         justify-content: center;
     }
+    h1,a {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
     .buttons{
         width: 250px;
         margin-left: unset;
+        margin-bottom: 5em;
+        gap: 30px;
     }
+    svg {
+        width: 200%;
+        margin-left: -60%;
+      }
   }
