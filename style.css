@@ -163,7 +163,7 @@ div.label.is-visible{
     .buttons{
         width: 250px;
         margin-left: unset;
-        margin-bottom: 5em;
+        margin-bottom: 6em;
         gap: 30px;
     }
     svg {
