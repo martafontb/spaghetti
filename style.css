@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap');
+
+@font-face {
+    font-family:'SF Pro Rounded' ;
+    src: url("SF-Pro-Rounded-Black.ttf");
+}
+
+body {
+font-family: 'Work Sans', sans-serif;
+font-size: 16px;
+line-height: 1.5;
+height: 100vh;
+background-color:#60BFEF;
+position: relative;
+}
+
+header {
+display: flex;
+align-items: flex-end;
+height: 100vh;
+}
+
+svg {
+height: fit-content;
+}
+
+
+.buttons {
+position:absolute;
+width: 300px;
+display: flex;
+flex-direction: column;
+height:100%;
+justify-content:center;
+gap: 50px;
+margin-left: 163px;
+margin-bottom: 2em;
+}
+
+div.title,
+div.intro {
+position: relative;
+}
+
+h1, .text {
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+}
+
+h1 {
+font-family: 'SF Pro Rounded';
+font-weight: 900;
+font-size: 28px;
+line-height: 115%;
+text-align: center;
+color:#F22A29;
+top: 0.2em;
+}
+
+.text {
+    bottom: 2em;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    line-height: 125%;
+    text-align: center;
+}
+
+a {
+    margin-top: 10px;
+    font-family: 'SF Pro Rounded';
+    text-decoration: none;
+    color:#F22A29;
+    position: relative;
+    font-size: 28px;
+}
+
+a:hover {
+    color:#F22A29;
+}
+
+a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F22A29;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
+  }
+
+
+.label {
+    font-family: 'SF Pro Rounded';
+    background-color: #FFDB54;
+    color:#F22A29;
+    font-size:18px;
+    padding: 8px 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    display: none;
+}
+
+div.label.is-visible{
+    display: block;
+}
+
+ path#birdbody {
+    transition: all 0.5s ease-in-out;
+ }
+ path#birdbody:hover{
+    animation: birdbody 3s infinite;
+ }
+
+ @keyframes birdbody {
+    0% {fill: rgba(255,194,255,0.9);}
+    25% {fill: #6bdcff;}
+    50% {fill: rgba(187,255,0,0.9);}
+    75% {fill:  #ff6f00}
+    100%{fill: rgba(255,117,255,0.9)}
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+    .buttons{
+        width: 250px;
+        margin-left: unset;
+    }
+  }
