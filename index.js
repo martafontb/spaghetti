@@ -6,7 +6,7 @@ const spaghettis = document.querySelectorAll("g#spaghetti1, g#spaghetti2, g#spag
 
 spaghettiTimeline
     .set(spaghettis, { y : 3 })
-    .to(spaghettis, { y : 150, duration: 0.25, delay:1, stagger: 0.25})
+    .to(spaghettis, { y : 160, duration: 0.25, delay:1, stagger: 0.25})
     .to(spaghettis, { y: 10, duration: 0.7, delay:1, stagger: 0.25  })
   
 // eyebrows    
