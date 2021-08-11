@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,700&display=swap');
-
 @font-face {
     font-family:'Savate', sans-serif ;
     src: url("savate-regular-webfont.ttf");
@@ -188,6 +186,7 @@ div.label.is-visible{
     }
     h1 {
         font-size: 32px;
+        padding: 20px;
     }
 
     p {
