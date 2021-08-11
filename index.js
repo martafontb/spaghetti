@@ -84,8 +84,8 @@ const clouds = document.querySelectorAll("g#cloud1, path#cloud2, path#cloud3, g#
 
 cloudsTimeline
     .set(clouds, {x:0})
-    .to(clouds, {x: 500, duration: 4, delay:1})
-    .to(clouds, {x: -200, duration: 7})
+    .to(clouds, {x: 700, duration: 9, delay:1})
+    .to(clouds, {x: -300, duration: 12})
 
 
 
