@@ -86,6 +86,7 @@ cloudsTimeline
     .set(clouds, {x:0})
     .to(clouds, {x: 700, duration: 9, delay:1})
     .to(clouds, {x: -300, duration: 12})
+    .to(clouds, {x: 0, duration: 6})
 
 
 
