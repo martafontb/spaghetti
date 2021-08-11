@@ -2,11 +2,11 @@ const spaghettiTimeline = gsap.timeline({
     repeat:-1
 })
 
-const spaghettis = document.querySelectorAll("g#spaghetti1, g#spaghetti2, g#spaghetti3, g#spaghetti4 ")
+const spaghettis = document.querySelectorAll("g#spaghetti1, g#spaghetti2, g#spaghetti3, g#spaghetti4, g#spaghetti5 ")
 
 spaghettiTimeline
     .set(spaghettis, { y : 3 })
-    .to(spaghettis, { y : 130, duration: 0.25, delay:1, stagger: 0.25})
+    .to(spaghettis, { y : 150, duration: 0.25, delay:1, stagger: 0.25})
     .to(spaghettis, { y: 10, duration: 0.7, delay:1, stagger: 0.25  })
   
 // eyebrows    
@@ -72,6 +72,23 @@ eyetreeTimeline
     .set(eyestree, {x:0})
     .to(eyestree, {x: -25, duration: 0.5, delay:1})
     .to(eyestree, {x: 0, duration: 0.75})
+
+
+//clouds 
+const cloudsTimeline = gsap.timeline({
+    repeat:-1,
+    repeatDelay: 2
+})    
+
+const clouds = document.querySelectorAll("g#cloud1, path#cloud2, path#cloud3, g#cloud4, g#cloud5")
+
+cloudsTimeline
+    .set(clouds, {x:0})
+    .to(clouds, {x: 500, duration: 4, delay:1})
+    .to(clouds, {x: -200, duration: 7})
+
+
+
 
 
 //lable
