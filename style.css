@@ -12,7 +12,6 @@
     100%{fill: rgba(255,117,255,0.9)}
   }
 
-
 @keyframes MoveUpDown {
     0%, 100% {
       transform: translateY(0);

@@ -80,7 +80,7 @@ const cloudsTimeline = gsap.timeline({
     repeatDelay: 2
 })    
 
-const clouds = document.querySelectorAll("g#cloud1, path#cloud2, path#cloud3, g#cloud4, g#cloud5")
+const clouds = document.querySelectorAll("path#cloud1, path#cloud2, path#cloud3, g#cloud4, g#cloud5")
 
 cloudsTimeline
     .set(clouds, {x:0})
