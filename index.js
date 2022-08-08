@@ -110,3 +110,35 @@ document.addEventListener("mousemove",function(event){
     label.style.left = event.clientX + "px"
     label.style.top = event.clientY + "px"
 })
+
+
+
+const infoReveal = document.querySelector('.reveal');
+const infoBox = document.querySelector('.info-box');
+const arrow = document.querySelector('.arrow');
+const textChange = document.querySelector('.reveal h2');
+
+
+
+//about
+infoReveal.addEventListener("click", function() {
+    infoReveal.classList.toggle("moving"),
+    infoBox.classList.toggle("open"),
+    arrow.classList.toggle("rotate"),
+    infoBox.classList.contains("open") ? textChange.innerHTML = " close" : textChange.innerHTML = " about",
+    arrow.classList.contains("rotate") ? (arrow.classList.remove("rotate-reverser"),
+    arrow.classList.add("rotate")) : (arrow.classList.remove("rotate"),
+    arrow.classList.add("rotate-reverser"))
+});
+;
+
+infoReveal.addEventListener("touchstart", function() {
+    infoReveal.classList.toggle("moving"),
+    infoBox.classList.toggle("open"),
+    arrow.classList.toggle("rotate"),
+    infoBox.classList.contains("open") ? textChange.innerHTML = " close" : textChange.innerHTML = " about",
+    arrow.classList.contains("rotate") ? (arrow.classList.remove("rotate-reverser"),
+    arrow.classList.add("rotate")) : (arrow.classList.remove("rotate"),
+    arrow.classList.add("rotate-reverser"))
+});
+;

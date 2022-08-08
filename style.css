@@ -1,10 +1,8 @@
-@keyframes birdbody {
-    0% {fill: rgba(255,194,255,0.9);}
-    25% {fill: #6E97CE;}
-    50% {fill: #498822;}
-    75% {fill:  #ff6f00}
-    100%{fill: rgba(255,117,255,0.9)}
-  }
+@font-face {
+  font-family: 'Ecentric';
+  src: url(Ecentric-DEMO.woff);
+}
+
 
 @keyframes MoveUpDown {
     0%, 100% {
@@ -60,7 +58,6 @@ animation: fadein 1s 0.25s both;
 div.title,
 div.intro {
 position: relative;
-animation: MoveUpDown 4s linear infinite;
 }
 
 div.intro {
@@ -77,11 +74,16 @@ height: 100%;
 width: 100%;
 }
 
+.arrow{
+position: absolute;
+top:50px;
+right: 50px;
+}
+
 h1 {
-font-family: 'Fraunces', serif;
-letter-spacing: -0.065em;
-font-size: 48px;
-line-height: 100%;
+font-family: 'Ecentric', serif;
+font-size: 70px;
+line-height: 60px;
 text-align: center;
 color:#498822;
 top: 0.2em;
@@ -138,6 +140,24 @@ a::before {
     transform: scaleX(1);
   }
 
+.info-box{
+  background-color: #F22A29;
+  font-size: 1.8vw;
+  height: 100vh;
+  padding: 0px 23px 53px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform .75s ease;
+  transform: translateX(200%);
+  width: 30%;
+  z-index: 1;
+  border-left: 3px solid black;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .label {
     background-color: #FFDB54;
@@ -153,17 +173,82 @@ a::before {
     display: none;
 }
 
+.about{
+  font-family: 'SavateRegular';
+  font-size: 2.5vw;
+  font-weight: 400;
+  letter-spacing: -0.065em;
+}
+
 div.label.is-visible{
     display: block;
 }
 
- path#birdbody {
-    transition: all 0.5s ease-in-out;
- }
- path#birdbody:hover{
-    animation: birdbody 3s infinite;
+div.reveal, div.cta {
+  position: absolute;
+  z-index: 10;
+}
+
+.cta{
+  font-size: 2vw;
+  left: 30px;
+  top: 30px;
+  width: 30vw;
  }
 
+.reveal {
+ font-size: 4vw;
+ right: 30px;
+ top: 30px;
+ transition: margin-right .75s ease;
+ cursor: pointer;
+ display:flex;
+}
+
+.open {
+  overflow: scroll;
+  transition: transform .75s ease;
+  transform: translateX(0);
+ }
+ 
+ .moving {
+     margin-right: 30%;
+     transition: margin-right .75s ease;
+ }
+
+ .info-box-title{
+    font-size: 2.5vw;
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    text-align: left;
+    text-transform: capitalize;
+    padding:30px;
+    font-family: 'SavateRegular';
+    color:#ffffff;
+ }
+
+ .text-box {
+  background-color:#D9D9D9;
+
+  border:2px solid black;
+  border-radius: 40px;
+ }
+
+ .text-box p {
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  line-height:39px;
+  text-transform: none;
+ }
+
+@media (min-width: 768px) {
+  div.title,
+  div.intro {
+  position: relative;
+  animation: MoveUpDown 4s linear infinite;
+  }
+}
 
   @media only screen and (max-width:1024) {
       svg {
@@ -177,8 +262,8 @@ div.label.is-visible{
         justify-content: center;
     }
     h1 {
-        font-size: 32px;
-        padding: 20px;
+      font-size: 45px;
+      line-height: 39px;
     }
 
     p {
