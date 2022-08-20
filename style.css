@@ -144,7 +144,7 @@ a::before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #F22A29;
+    background-color: #FFDB54;
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
@@ -260,7 +260,7 @@ div.reveal, div.cta {
  .text-box p {
   color: #000;
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.325rem;
   line-height: 1.33;
   text-transform: none;
   padding:0;
@@ -282,6 +282,7 @@ div.reveal, div.cta {
   text-transform: capitalize;
   letter-spacing: -0.065em;
   text-align: center;
+  cursor: pointer;
   -webkit-transition-duration: .3s;
   -o-transition-duration: .3s;
   transition-duration: .3s;
@@ -293,14 +294,17 @@ div.reveal, div.cta {
   transition-timing-function: cubic-bezier(.4,0,.2,1);
  }
 
+ .info-box-cta a{
+  color:#498822;
+ }
+
  .info-box-cta:hover{
-  background-color: #000;
-  border: 2px solid #ffffff;
+  background-color:#498822;
   border-radius: 6px;
  }
 
  .info-box-cta:hover a {
-  color: #ffffff;
+  color: #FFDB54;
  }
 
  .contact-bird{
