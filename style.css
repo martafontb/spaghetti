@@ -269,10 +269,17 @@ div.reveal, div.cta {
   padding-top:0.75rem;
  }
 
+ .info-box-text-box{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ }
+
  .info-box-cta{
-  background-color: #FFDB54;
+  background-color:#498822;
+  border-radius: 6px;
   padding: 22px;
-  border-radius: 30px;
   border: 2px solid #000;
   font-family: 'SavateRegular';
   font-weight: 400;
@@ -295,15 +302,6 @@ div.reveal, div.cta {
  }
 
  .info-box-cta a{
-  color:#498822;
- }
-
- .info-box-cta:hover{
-  background-color:#498822;
-  border-radius: 6px;
- }
-
- .info-box-cta:hover a {
   color: #FFDB54;
  }
 
@@ -366,6 +364,7 @@ div.reveal, div.cta {
       .info-box{
         width: 100%;
         border-left: none;
+        overflow: hidden;
       }
       .info-box-title,
       .about {
